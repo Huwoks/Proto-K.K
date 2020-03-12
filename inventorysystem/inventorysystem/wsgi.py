@@ -14,3 +14,6 @@ from django.core.wsgi import get_wsgi_application
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'inventorysystem.settings')
 
 application = get_wsgi_application()
+
+#sys.path.append('/home/soqtt33cpu44z/Django-API-SellPoint/inventorysystem')
+#sys.path.append('/home/soqtt33cpu44z/Django-API-SellPoint/inventory')
