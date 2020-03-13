@@ -3,20 +3,16 @@
         <div class="row">
             <div class="col text-left">
                 <h2>Listado de productos</h2>
-
-                <div class="col-md-12">
-                    <b-table striped hover :items="products" :fields="fields">
-
-                        <template slot="table-row" slot-scope="props">
-                            <b-button size="sm" variant="primary">
-                                Editar
-                            </b-button>
-                            <b-button size="sm" variant="danger">
-                                Eliminar
-                            </b-button>
+    
+                <div class="overflow-auto"> 
+                    <v-data-table striped hover :items="products" :fields="fields" id="products" :per-page="perPage" :current-page="currentPage" small>
+                        <template v-slot:cell(action)="data">
+                            <b-button size="sm" variant="primary">Editar</b-button>
+                            <br>
+                            <b-button size="sm" variant="danger">Eliminar</b-button>
                         </template>
                     
-                    </b-table>
+                    </v-data-table>
                 </div>
             </div>
         </div>
@@ -29,6 +25,8 @@ import axios from 'axios';
 export default {
     data () {
         return{
+            perPage: 10,
+            currentPage: 1,
             fields: [
                 { key: 'product_category', label: 'Categoría' },
                 { key: 'part_number_lcsc', label: 'LCSC #Parte' },
@@ -39,9 +37,14 @@ export default {
             products: []
         }
     },
+    computed: {
+      rows() {
+        return this.products.length
+      }
+    },
     methods: {
         getProducts (){
-            const path = 'http://127.0.0.1:8000/api/v1/products/'
+            const path = 'http://sellpoint.ucaribeprojects.xyz/api/v1/products/'
             axios.get(path).then((response) => {
                     this.products = response.data
                 })
