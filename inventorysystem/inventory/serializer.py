@@ -17,6 +17,9 @@ class SalemanSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class StockSerializer(serializers.ModelSerializer):
+    product = serializers.SlugRelatedField(slug_field='description', queryset=product.objects.all())
+    supplier = serializers.SlugRelatedField(slug_field='name', queryset=supplier.objects.all())
+    sale_man = serializers.SlugRelatedField(slug_field='name', queryset=sale_man.objects.all())
     class Meta:
         model = stock
         fields = '__all__'
@@ -27,11 +30,13 @@ class CustomerSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 class OrderSerializer(serializers.ModelSerializer):
+    customer = serializers.SlugRelatedField(slug_field='name', queryset=customer.objects.all())
     class Meta:
         model = order
         fields = '__all__'
 
 class OrdermetaSerializer(serializers.ModelSerializer):
+    product = serializers.SlugRelatedField(slug_field='description', queryset=product.objects.all())
     class Meta:
         model = order_meta
         fields = '__all__'

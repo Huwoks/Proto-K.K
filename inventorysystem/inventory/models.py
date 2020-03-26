@@ -9,6 +9,8 @@ class product(models.Model):
     description = models.TextField()
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    datasheet = models.FileField(default='')
+    image = models.ImageField(default='')
 
     def __str__(self):
         return self.description
@@ -39,9 +41,9 @@ class stock(models.Model):
     mxn_unit_price_before_import = models.FloatField()
     mxn_unit_price_after_import = models.FloatField()
     mxn_unit_buy_price = models.IntegerField()
-    product = models.ForeignKey(product, on_delete=models.CASCADE)
-    supplier = models.ForeignKey(supplier, on_delete=models.CASCADE)
-    sale_man = models.ForeignKey(sale_man, on_delete=models.CASCADE)
+    product = models.ForeignKey(product, on_delete=models.CASCADE, related_name='stockproduct')
+    supplier = models.ForeignKey(supplier, on_delete=models.CASCADE, related_name='stocksupplier')
+    sale_man = models.ForeignKey(sale_man, on_delete=models.CASCADE, related_name='stocksaleman')
 
 
 class customer(models.Model):
@@ -55,7 +57,7 @@ class customer(models.Model):
 
 class order(models.Model):
     total = models.IntegerField()
-    customer = models.ForeignKey(customer, on_delete=models.CASCADE)
+    customer = models.ForeignKey(customer, on_delete=models.CASCADE, related_name='customer')
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
@@ -66,7 +68,7 @@ class order_meta(models.Model):
     price = models.FloatField()
     quantity = models.IntegerField()
     row_total_price = models.IntegerField()
-    product = models.ForeignKey(product, on_delete=models.CASCADE)
-    order = models.ForeignKey(order, on_delete=models.CASCADE)
+    product = models.ForeignKey(product, on_delete=models.CASCADE, related_name='product')
+    order = models.ForeignKey(order, on_delete=models.CASCADE, related_name='order')
 
 

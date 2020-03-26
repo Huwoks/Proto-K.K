@@ -23,9 +23,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '%%9i4+z&2=fz5d&ufh2n($mw)*hoy_lgxah@njw8v!a7l3h2b^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ["sellpoint.ucaribeprojects.xyz", "www.sellpoint.ucaribeprojects.xyz"]
+ALLOWED_HOSTS = ["sellpoint.ucaribeprojects.xyz", "www.sellpoint.ucaribeprojects.xyz", "127.0.0.1"]
 
 
 # Application definition
@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'rest_framework',
     'rest_framework.authtoken',
     'corsheaders',
+    'django_filters'
 ]
 
 MIDDLEWARE = [
@@ -82,6 +83,10 @@ TEMPLATES = [
 WSGI_APPLICATION = 'inventorysystem.wsgi.application'
 
 REST_FRAMEWORK = {
+    'DEFAULT_FILTER_BACKENDS': ('django_filters.rest_framework.DjangoFilterBackend',)
+}
+"""
+REST_FRAMEWORK = {
     'DEFAULT_AUTHENTICATION_CLASSES': (
         'rest_framework.authentication.TokenAuthentication'
 
@@ -90,7 +95,7 @@ REST_FRAMEWORK = {
         'rest_framework.permissions.IsAuthenticated'
     ),
 }
-
+"""
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
