@@ -79,6 +79,14 @@
           awesome-vue
         </a>
       </li>
+      </ul>
+   <h2>Examples</h2>
+   <ul>
+      <li>
+        <router-link tag ="li" to="/button">
+          <a>button-vue</a>
+        </router-link>
+      </li>
     </ul>
   </div>
 </template>
@@ -86,9 +94,10 @@
 <script>
 export default {
   name: 'HelloWorld',
+
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
     }
   }
 }
