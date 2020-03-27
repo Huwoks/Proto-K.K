@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '%%9i4+z&2=fz5d&ufh2n($mw)*hoy_lgxah@njw8v!a7l3h2b^'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ["sellpoint.ucaribeprojects.xyz", "www.sellpoint.ucaribeprojects.xyz", "127.0.0.1"]
 
