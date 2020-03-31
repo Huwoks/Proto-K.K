@@ -1,0 +1,6 @@
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION BEGIN
+PassengerAppRoot "/home/soqtt3cpu44z/Django-API-SellPoint/inventorysystem"
+PassengerBaseURI "/"
+PassengerPython "/home/soqtt3cpu44z/virtualenv/Django-API-SellPoint/inventorysystem/3.5/bin/python3.5"
+PassengerAppLogFile "/home/soqtt3cpu44z/logs/inventoryappdjango"
+# DO NOT REMOVE. CLOUDLINUX PASSENGER CONFIGURATION END
