@@ -21,7 +21,7 @@
         data(){
             return{
                 quantity: 5,
-                cart: 0
+                cart: 0,
             }
         },
         methods:{
