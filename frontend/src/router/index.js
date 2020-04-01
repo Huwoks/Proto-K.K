@@ -1,15 +1,18 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
-<<<<<<< HEAD
 import Cart from '@/components/Cart'
-=======
+<<<<<<< HEAD
 import Button from '@/components/example/Button.vue'
->>>>>>> 7f0ca8c307a8e7d19eab275b9f9b1207b4e7c51c
+=======
+import Navbar from '@/components/Navbar'
+import { NavbarPlugin } from 'bootstrap-vue'
+>>>>>>> 7d55e9da7581af3b025b6871aa9c1fc35dbb0f17
 
 Vue.use(Router)
 
 export default new Router({
+<<<<<<< HEAD
   routes: [
     {
       path: '/',
@@ -17,15 +20,33 @@ export default new Router({
       component: HelloWorld
     },
     {
-<<<<<<< HEAD
       path: '/cart',
       name: 'Cart',
       component: Cart
-=======
+    },
+    {
       path: '/button',
       name: 'Button',
       component: Button
->>>>>>> 7f0ca8c307a8e7d19eab275b9f9b1207b4e7c51c
     }
   ]
 })
+=======
+    routes: [{
+            path: '/',
+            name: 'HelloWorld',
+            component: HelloWorld
+        },
+        {
+            path: '/cart',
+            name: 'Cart',
+            component: Cart
+        },
+        {
+            path: '/Navbar',
+            name: 'Navbar',
+            component: Navbar
+        }
+    ]
+})
+>>>>>>> 7d55e9da7581af3b025b6871aa9c1fc35dbb0f17
