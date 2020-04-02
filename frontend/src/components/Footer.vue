@@ -15,7 +15,7 @@
             <ul class="footer-links">
               <li>Universidad del Caribe</li>
               <l1>Esquina Fraccionamiento, Tabachines, 77528 Cancún, Q.R.</l1>
-              <li>+52 9983 468366</li>
+              <li>+52 998 346 8366</li>
               <li>Proto K.K.</li>
             </ul>
           </div>
@@ -57,15 +57,15 @@
 <style scoped>
 .site-footer
 {
-  background-color: #d9534f;
+  background:linear-gradient(180deg, #0288D1,  #0097A7);
   padding:45px 0 20px;
   font-size:15px;
   line-height:24px;
-  color:#33353d;
+  color:#fff;
 }
 .site-footer hr
 {
-  border-top-color:#bbb;
+  border-top-color:#fff;
   opacity:0.5
 }
 .site-footer hr.small
@@ -82,7 +82,7 @@
 }
 .site-footer a
 {
-  color: #33353d;
+  color: white;
 }
 .site-footer a:hover
 {
@@ -100,7 +100,7 @@
 }
 .footer-links a
 {
-  color:#33353d
+  color:white
 }
 .footer-links a:active,.footer-links a:focus,.footer-links a:hover
 {
@@ -205,10 +205,7 @@
 {
   background-color:#007bb6
 }
-.social-icons a.dribbble:hover
-{
-  background-color:#ea4c89
-}
+
 .social-icons a.whatsapp:hover
 {
   background-color:green
@@ -222,7 +219,7 @@
     font-weight:600
   }
 }
-</style>>
+</style>
 
 
  

@@ -71,6 +71,7 @@ export default {
 
 <style lang="scss" scoped>
 * {
+  background:linear-gradient(180deg, #0288D1,  #0097A7);
   box-sizing: border-box;
   font-family: sans-serif;
 }
@@ -79,6 +80,7 @@ export default {
   border-top: 1px solid #ddd;
   border-bottom: 1px solid #ddd;
   margin: 2em;
+  
 }
 
 ul {
@@ -100,13 +102,13 @@ ul {
     display: flex;
     text-align: center;
     text-decoration: none;
-    color: #777;
+    color: #fff;
     padding: 1rem;
   }
 
   li a:hover {
-    background: #777;
-    color: #fff;
+    background: #fff;
+    color: black;
   }
 }
 
