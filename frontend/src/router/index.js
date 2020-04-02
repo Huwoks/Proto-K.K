@@ -3,6 +3,8 @@ import Router from 'vue-router'
 import HelloWorld from '@/components/HelloWorld'
 import Cart from '@/components/Cart'
 import Navbar from '@/components/Navbar'
+import Footer from '@/components/Footer'
+
 import { NavbarPlugin } from 'bootstrap-vue'
 
 Vue.use(Router)
@@ -22,6 +24,11 @@ export default new Router({
             path: '/Navbar',
             name: 'Navbar',
             component: Navbar
+        },
+        {
+            path: '/Footer',
+            name: 'Footer',
+            component: Footer
         }
     ]
 })

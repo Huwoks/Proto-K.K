@@ -1,60 +1,73 @@
 <template>
   <div class="d-flex align-content-start flex-wrap">
     <nav class="main-navigation">
-      <b-navbar toggleable="lg" type="dark" variant="danger" fixed="top" position= fixed>
+      <b-navbar
+        toggleable="lg"
+        type="dark"
+        variant="danger"
+        fixed="top"
+        position="fixed"
+      >
         <b-navbar-brand href="#">Proto K.K.</b-navbar-brand>
         <b-navbar-nav>
           <!-- Logo -->
         </b-navbar-nav>
-          <ul class="menu">
-              <li><a href="#">Carrito</a></li>
-            <li class="menu-item-has-children">
-              <a href="#">Usuario</a>
-              <ul class="sub-menu">
-             <li><a href="#">Ordenes</a></li>
-                     <li><a href="#">Cerrar Sesión</a></li>
-              </ul>
-            <li class="menu-item-has-children">
-              <a href="#">Catálogo</a>
-              <ul class="sub-menu">
-                <li class="menu-item-has-children">
-                  <a href="#">Resistencias</a>
-                  <ul class="sub-menu">
-                    <li><a href="#">Carbón</a></li>
-                    <li><a href="#">Metal</a></li>
-                  </ul>
-                </li>
-                <li class="menu-item-has-children">
-                  <a href="#">Capcitores</a>
-                  <ul class="sub-menu">
-                    <li><a href="#">Cerámicos</a></li>
-                    <li><a href="#">Electrolíticos</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            
-          </ul>
-          
-        <b-navbar-nav class="ml-auto">
-            
-          <b-nav-form>
-            <b-form-input
-              size="sm"
-              class="mr-sm-2"
-              placeholder="Search">
-              </b-form-input>
-            <b-button size="sm" class="my-2 my-sm-0" type="submit">Search</b-button>
-          </b-nav-form>
-          
-</b-navbar-nav>
+        <ul class="menu">
+          <li><a href="#">Carrito</a></li>
+          <li class="menu-item-has-children">
+            <a href="#">Usuario</a>
+            <ul class="sub-menu">
+              <li><a href="#">Ordenes</a></li>
+              <li><a href="#">Cerrar Sesión</a></li>
+            </ul>
+          </li>
 
-        
+          <li class="menu-item-has-children">
+            <a href="#">Catálogo</a>
+            <ul class="sub-menu">
+              <li class="menu-item-has-children">
+                <a href="#">Resistencias</a>
+                <ul class="sub-menu">
+                  <li><a href="#">Carbón</a></li>
+                  <li><a href="#">Metal</a></li>
+                </ul>
+              </li>
+              <li class="menu-item-has-children">
+                <a href="#">Capcitores</a>
+                <ul class="sub-menu">
+                  <li><a href="#">Cerámicos</a></li>
+                  <li><a href="#">Electrolíticos</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+
+        <b-navbar-nav class="ml-auto">
+          <b-nav-form>
+            <b-form-input size="sm" class="mr-sm-2" placeholder="Search">
+            </b-form-input>
+            <b-button size="sm" class="my-2 my-sm-0" type="submit"
+              >Search</b-button
+            >
+          </b-nav-form>
+        </b-navbar-nav>
       </b-navbar>
     </nav>
-    
+
+    <Footer class="footer"/>
   </div>
 </template>
+
+<script>
+import Footer from "./Footer";
+export default {
+  components: {
+    Footer
+  }
+};
+
+</script>
 
 <style lang="scss" scoped>
 * {
@@ -160,6 +173,12 @@ nav ul li:hover > ul {
     content: ">";
     padding: 1px;
     transform: rotate(0deg);
+  }
+  .footer{
+    margin-top: 100%;
+    right: 0%;
+    left: 0%;
+    position:absolute;
   }
 }
 </style>
