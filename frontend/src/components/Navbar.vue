@@ -1,5 +1,5 @@
 <template>
-  <div class="d-flex align-content-start flex-wrap">
+  <div class="align-content-start">
     <nav class="main-navigation">
       <b-navbar
         toggleable="lg"
