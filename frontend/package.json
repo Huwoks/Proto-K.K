@@ -13,6 +13,7 @@
     "bootstrap-vue": "^2.8.0",
     "flexbox": "0.0.3",
     "vue": "^2.5.2",
+    "vue-concise-slider": "^3.4.4",
     "vue-flex": "^2.1.2",
     "vue-router": "^3.0.1"
   },
