@@ -6,6 +6,9 @@ import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Table from '@/components/Table'
 import kkarousel from '@/components/kkarousel'
+import exptable from '@/components/exptable'
+import CategoryPage from '@/components/CategoryPage'
+
 /*
 import kkard_viewer from '@/components/kkard_viewer'
 */
@@ -47,13 +50,29 @@ export default new Router({
             path: '/kkarousel',
             name: 'kkarousel',
             component: kkarousel
-        }
-        ,
+        },
         {
             path: '/Product',
             name: 'Product',
             component: Product
-        }/*,
+        },
+        {
+            path: '/exptable',
+            name: 'exptable',
+            component: exptable
+        },
+        {
+            path: '/CategoryPage',
+            name: 'CategoryPage',
+            component: CategoryPage
+        }
+
+
+
+
+
+
+        /*,
         {
             path: '/kkard_viewer',
             name: 'kkard_viewer',
