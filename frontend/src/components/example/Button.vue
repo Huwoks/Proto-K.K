@@ -1,4 +1,3 @@
-
 <template>
     <div>
         <h1>Button test</h1>
