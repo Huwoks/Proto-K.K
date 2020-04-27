@@ -102,7 +102,7 @@ REST_FRAMEWORK = {
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'inventory',
+        'NAME': 'inventory-dev',
         'USER': 'inventory',
         'PASSWORD': 'djangoinventoryapp',
         'HOST': '127.0.0.1',

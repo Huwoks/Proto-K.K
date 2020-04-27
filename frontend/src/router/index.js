@@ -5,6 +5,16 @@ import Cart from '@/components/Cart'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 import Table from '@/components/Table'
+import kkarousel from '@/components/kkarousel'
+import exptable from '@/components/exptable'
+import CategoryPage from '@/components/CategoryPage'
+import ProductTable from '@/components/ProductTable'
+/*
+import kkard_viewer from '@/components/kkard_viewer'
+*/
+import Product from '@/components/Product'
+
+
 import { NavbarPlugin } from 'bootstrap-vue'
 
 Vue.use(Router)
@@ -35,6 +45,38 @@ export default new Router({
             path: '/Table',
             name: 'Table',
             component: Table
+        },
+        {
+            path: '/kkarousel',
+            name: 'kkarousel',
+            component: kkarousel
+        },
+        {
+            path: '/Product',
+            name: 'Product',
+            component: Product
+        },
+        {
+            path: '/exptable',
+            name: 'exptable',
+            component: exptable
+        },
+        {
+            path: '/CategoryPage',
+            name: 'CategoryPage',
+            component: CategoryPage
+        },
+        {
+            path: '/ProductTable',
+            name: 'ProductTable',
+            component: ProductTable
         }
+
+        /*,
+        {
+            path: '/kkard_viewer',
+            name: 'kkard_viewer',
+            component: kkard_viewer
+        }*/
     ]
 })

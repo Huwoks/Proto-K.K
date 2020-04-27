@@ -1,12 +1,12 @@
 <template>
-    <h2>{{ pito }}</h2>
+    <h2>{{ title }}</h2>
 </template>
 
 <script>
 export default {
     data() {
         return {
-            pito: 'Pito'
+            title: 'En mantenimiento'
         }
     },
     methods: {
