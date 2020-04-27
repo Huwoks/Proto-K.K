@@ -8,7 +8,7 @@ import Table from '@/components/Table'
 import kkarousel from '@/components/kkarousel'
 import exptable from '@/components/exptable'
 import CategoryPage from '@/components/CategoryPage'
-
+import ProductTable from '@/components/ProductTable'
 /*
 import kkard_viewer from '@/components/kkard_viewer'
 */
@@ -65,12 +65,12 @@ export default new Router({
             path: '/CategoryPage',
             name: 'CategoryPage',
             component: CategoryPage
+        },
+        {
+            path: '/ProductTable',
+            name: 'ProductTable',
+            component: ProductTable
         }
-
-
-
-
-
 
         /*,
         {
