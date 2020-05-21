@@ -153,7 +153,7 @@ export default {
   float: center;
   padding: 5px 120px;
   top: 30%;
-  
+  padding: 0px 30px 30px 200px;
   position: absolute;
 }
 .input {
@@ -165,7 +165,7 @@ export default {
 }
 .filter {
   position: absolute;
-  width: 500px;
+  width: 600px;
   height: 200px;
   top: 20%;
   
