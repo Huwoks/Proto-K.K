@@ -3,7 +3,12 @@
         <div class="row">
             <h2>Product list</h2> <br>
             <div class="col-md-12">
-                <b-table striped hover :items="items" :fields="fields"></b-table>               
+                <b-table striped hover :items="items" :fields="fields" :current-page="currentPage" :per-page="perPage">
+                    <template v-slot:cell(image)="data">
+                        <img :src="data.value" style="width: 50px; height: 40px;">
+                    </template>
+                </b-table>     
+                <b-pagination size="md" :total-rows="totalItems" v-model="currentPage" :per-page="perPage"></b-pagination>          
             </div>
         </div>
     </div>
@@ -23,7 +28,10 @@ export default {
                 {key: 'mrf_part_number', label: 'MRF'},
                 {key: 'description', label: 'Description'}
             ],
-            items:[]
+            items:[],
+            currentPage: 0,
+            perPage: 10,
+            totalItems: 90
         }
     },
 
@@ -36,7 +44,8 @@ export default {
             .catch((error) => {
                 console.log(error)
             })
-        }   
+        },
+           
     },
     created(){
         this.getItems()
