@@ -1,5 +1,6 @@
 <template>
     <div class="container">
+        <Navbar/>
         <div class="row">
             <h2>Product list</h2> <br>
             <div class="col-md-12">
@@ -17,10 +18,13 @@
 
 <script>
 import axios from 'axios';
-import Table from "./Table";
+import Table from "@/components/Table";
+import Navbar from '@/components/Navbar.vue'
 export default {
-    components: {Table},
-
+    components: {
+        Table,
+        Navbar,
+    },
     data (){
         return{
             fields: [
