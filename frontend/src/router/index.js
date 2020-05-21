@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import HelloWorld from '@/components/HelloWorld'
+import Home from '@/components/Home'
 import Cart from '@/components/Cart'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
@@ -9,6 +9,8 @@ import kkarousel from '@/components/kkarousel'
 import exptable from '@/components/exptable'
 import CategoryPage from '@/components/CategoryPage'
 import ProductTable from '@/components/ProductTable'
+import ShoppingCart from '@/components/ShoppingCart'
+import Shopp from '@/components/Shopp'
 /*
 import kkard_viewer from '@/components/kkard_viewer'
 */
@@ -20,11 +22,10 @@ import { NavbarPlugin } from 'bootstrap-vue'
 Vue.use(Router)
 
 export default new Router({
-    routes: [
-        {
+    routes: [{
             path: '/',
-            name: 'HelloWorld',
-            component: HelloWorld
+            name: 'Home',
+            component: Home
         },
         {
             path: '/cart',
@@ -70,6 +71,16 @@ export default new Router({
             path: '/ProductTable',
             name: 'ProductTable',
             component: ProductTable
+        },
+        {
+            path: '/ShoppingCart',
+            name: 'ShoppingCart',
+            component: ShoppingCart
+        },
+        {
+            path: '/Shopp',
+            name: 'Shopp',
+            component: Shopp
         }
 
         /*,

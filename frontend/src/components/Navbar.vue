@@ -9,12 +9,12 @@
         fixed="top"
         position="fixed"
       >
-        <b-navbar-brand href="#">Proto K.K.</b-navbar-brand>
+        <b-navbar-brand @click="goHome()">Proto K.K.</b-navbar-brand>
         <b-navbar-nav>
           <!-- Logo -->
         </b-navbar-nav>
         <ul class="menu">
-          <li><a href="#">Carrito</a></li>
+          <li><a @click="goShoppingCart">Carrito</a></li>
           <li class="menu-item-has-children">
             <a href="#">Usuario</a>
             <ul class="sub-menu">
@@ -44,6 +44,8 @@
           </li>
         </ul>
 
+        <li><a @click="goAllProducts()">Productos</a></li>
+
         <b-navbar-nav class="ml-auto">
           <b-nav-form>
             <b-form-input size="sm" class="mr-sm-2" placeholder="Search">
@@ -65,7 +67,18 @@ import Footer from "./Footer";
 export default {
   components: {
     Footer
-  }
+  },
+  methods: {
+    goShoppingCart(){
+      this.$router.push({name: 'Shopp'})
+    },
+    goHome(){
+      this.$router.push({name: 'Home'})
+    },
+    goAllProducts(){
+      this.$router.push({name: 'ProductTable'})
+    }
+  },
 };
 
 </script>

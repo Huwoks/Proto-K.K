@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Product from './components/Product';
+import Product from '@/components/Product';
 export default {
   name: 'app',
   components: {
@@ -24,19 +24,19 @@ export default {
           title: 'Nike Air Max',
           color: 'green',
           bgtext: 'NIKE',
-          src: require('./assets/green-shoe.png')
+          src: require('@/assets/green-shoe.png')
         },
         {
           title: 'Nike flex',
           color: 'blue',
           bgtext: 'AIR',
-          src: require('./assets/blue-shoe.png')
+          src: require('@/assets/blue-shoe.png')
         },
         {
           title: 'Nike Roche Runs',
           color: 'pink',
           bgtext: 'MAX',
-          src: require('./assets/pink-shoe.png')
+          src: require('@/assets/pink-shoe.png')
         }
       ]
     }

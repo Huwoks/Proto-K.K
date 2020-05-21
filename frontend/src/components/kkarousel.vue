@@ -21,15 +21,15 @@ export default {
         //Sliding configuration [obj]
         options: {
           currentPage: 0,
-          thresholdDistance:500,
-          thresholdTime:100,
+          thresholdDistance:1000,
+          thresholdTime:1000,
           autoplay:1000,
           loop:true,
           direction:'vertical',
           loopedSlides:1,
           slidesToScroll:1,
           timingFunction: 'ease',
-          speed: 300
+          speed: 1000
         }
       }
     },
@@ -42,19 +42,19 @@ export default {
       setTimeout(function () {
         that.someList = [
           {
-            html: 'slide1',
+            html: 'Los mejores electrónicos en ProtoK.K',
             style: {
               'background': '#1bbc9b'
             }
           },
           {
-            html: 'slide2',
+            html: '20% de descuento en tu primera compra.',
             style: {
               'background': '#4bbfc3'
             }
           },
           {
-            html: 'slide3',
+            html: 'HotSale. ¡Revisa nuestros articulos participantes!',
             style: {
               'background': '#7baabe'
             }
